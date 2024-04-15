@@ -4,7 +4,7 @@
 
 body{
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #333;
   background: #f7f7f7;
 }
@@ -140,6 +140,7 @@ nav a:hover{
 .col h1, p, a.btn-link{
   padding: 1rem 0;
   color: #fff;
+  position: relative;
 }
 
 .col p{
@@ -157,7 +158,6 @@ a.btn-link{
   width: auto;
   font-size: 1rem;
   transition: all .3s;
-  position: relative;
 }
 
 a.btn-link:hover{
@@ -327,6 +327,69 @@ details[open] summary ~ * {
   margin-top: 1rem;
 }
 
+.sobre-nos {
+  line-height: 1.3rem;
+}
+
+.missao_obj {
+  background: #07534c;
+  column-count: 2;
+  column-gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.col-obj {
+  break-inside: avoid;
+  margin: 1rem 0;
+}
+
+.obj {
+  background: #07534c;
+  border: 1px #ccc solid;
+  padding: 2rem 0;
+}
+
+i {
+  font-size: 1.1rem;
+  color: #066c61;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.itl {
+  font-style: italic;
+  color: #fff;
+}
+
+.container-ul{
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+#compromisso .container-ul{
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+#compromisso .container-ul .col-n{
+  break-inside: avoid;
+  text-align: left;
+}
+
+.container-ul .col-n ul li{
+  background: rgb(4, 107, 98, 0.5);
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  list-style: none;
+  border-radius: .4rem;
+  border: 1px #abf0ea solid;
+}
+
+
 @keyframes anima {
   0%    {opacity: 0; margin-left: -10px}
   100%  {opacity: 1; margin-left: 0px}
@@ -337,8 +400,8 @@ details[open] summary ~ * {
   background: url(../medias/bg-sub-footer.jpg) repeat-x center right;
   text-align: center;
   color: #fff;
-  font-size: 2.5rem;
   line-height: 140%;
+  background-size: 180%;
 }
 
 #compromisso p{
@@ -418,7 +481,8 @@ tel, email{
 
   #compromisso{
     padding: 4rem 0;
-    background: url(../medias/bg-sub-footer.jpg) repeat-x center right -350px;
+    background:  url(../medias/bg-sub-footer.jpg) repeat-x center right -350px;
+    background-size: 160%;;
 
   }
 
@@ -427,6 +491,12 @@ tel, email{
 @media (max-width:1024px){
   #hero{
     height: 38rem;
+  }
+  
+  #compromisso{
+    padding: 4rem 0;
+    background: url(../medias/bg-sub-footer.jpg) repeat-x center right -350px;
+    background-size: 280%;
   }
 
   #faq{
@@ -446,6 +516,20 @@ tel, email{
 }
 
 @media (max-width: 760px){
+  
+  .missao_obj{
+    column-count: 1;
+  }
+
+  #compromisso .container-ul{
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 1rem;
+  }
+
+  .sobre-nos {
+    line-height: 1.6rem;
+  }
 
   .flex-hero .col h1{
     font-size: 3rem;
@@ -559,11 +643,14 @@ tel, email{
 
   #compromisso{
     padding: 4rem 0;
-    background: url(../medias/bg-sub-footer.jpg) repeat-x center right -350px;
-    text-align: center;
-    color: #fff;
-    font-size: 2.5rem;
-    line-height: 140%;
+    background:  #fff;
+    background-size: 450%;;
+
+  }
+  
+  #compromisso .container-ul{
+    column-count: 1;
+    column-count: 1;
   }
 
   #compromisso p{
@@ -589,10 +676,25 @@ tel, email{
     padding: 1rem 0;
     text-align: center;
     border-radius: .5rem;
+    position: relative;
   }
 
   #compromisso{
     background: url(../medias/bg-sub-footer.jpg) repeat-x center right -500px;
   }
 
+}
+
+.wpp {
+  position: absolute; 
+  right: -10px;
+  bottom: -25px;
+  color: white;
+}
+
+.nosso {
+  margin-bottom: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2rem;
 }
