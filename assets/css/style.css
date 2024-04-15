@@ -2,9 +2,13 @@
   margin: 0; padding: 0; box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   background: #f7f7f7;
 }
@@ -95,7 +99,6 @@ nav a:hover{
   border-bottom: 2px #ccc solid;
 }
 
-
 #hero{
   background: url(../medias/bg-hero.jpg) no-repeat center bottom;
   height: 36.75rem;
@@ -120,7 +123,6 @@ nav a:hover{
 .flex-hero .col:nth-child(2){
   text-align: center;
 }
-
 
 .flex-hero .col h1{
   font-size: 3rem;
@@ -176,13 +178,10 @@ a.btn-link:hover{
   padding: 1rem 0;
 }
 
-
-
 #sobre .container{
   margin-top: 3rem;
   display: flex;
 }
-
 
 .img-responsive{
   width: 100%;
@@ -230,26 +229,28 @@ a.btn-link:hover{
 
 .galeria{
   margin: 2rem auto;
+  column-count: 4;
+  column-gap: 1rem;
+  width: 1000px;
 }
 
-.galeria{
-  display: flex;
-  gap:1rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.ga-desc{
+  width: 100%;
+  padding: .5rem;
+  border: 1px #ccc solid;
+  break-inside: avoid;
+  margin-bottom: 1rem;
 }
 
-picture img{
-  opacity: .4;
-  cursor: pointer;
+.ga-desc p{
+  color: #777;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 .gallery{
-  width: 262px;
-  height: 180px;
-  border-radius: .5rem;
-  cursor: pointer;
+  width: 100%;
 }
 
 .h2-t, .p-t{
@@ -268,7 +269,6 @@ picture img{
 #faq h2,p{
   color: #046C61;
 }
-
 
 .faq-space{
   margin-bottom: 2rem;
@@ -321,7 +321,6 @@ details[open] summary:after{
 details[open] summary ~ * {
   animation: anima .5s ease-in-out;
 }
-
 
 .m-t {
   margin-top: 1rem;
@@ -436,7 +435,6 @@ footer nav {
   flex-direction: column;
 }
 
-
 footer nav a{
   font-size: .9rem;
   border-bottom: 2px transparent solid;
@@ -492,7 +490,33 @@ tel, email{
   #hero{
     height: 38rem;
   }
+
+  .galeria{
+    margin: 2rem auto;
+    column-count: 3;
+    column-gap: 1rem;
+    width: 100%;
+  }
   
+  #trabalhos{
+    padding: 2rem 1rem;
+  }
+
+  .ga-desc{
+    width: 100%;
+    padding: .5rem;
+    break-inside: avoid;
+  }
+
+  .ga-desc p{
+    color: #777;
+    font-style: italic;
+  }
+
+  .gallery{
+    width: 100%;
+  }
+
   #compromisso{
     padding: 4rem 0;
     background: url(../medias/bg-sub-footer.jpg) repeat-x center right -350px;
@@ -516,9 +540,35 @@ tel, email{
 }
 
 @media (max-width: 760px){
-  
+
   .missao_obj{
     column-count: 1;
+  }
+  
+  .galeria{
+    margin: 1rem auto;
+    column-count: 1;
+    column-gap: 1rem;
+    width: 100%;
+    padding: 1rem !importante;
+  }
+
+  .ga-desc{
+    width: 100%;
+    padding: .5rem;
+    border: 1px #ccc solid;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  .ga-desc p{
+    color: #777;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  .gallery{
+    width: 100%;
   }
 
   #compromisso .container-ul{
@@ -647,7 +697,7 @@ tel, email{
     background-size: 450%;;
 
   }
-  
+
   #compromisso .container-ul{
     column-count: 1;
     column-count: 1;
@@ -658,7 +708,6 @@ tel, email{
   }
 
 }
-
 
 @media (max-width: 480px){
   nav{
