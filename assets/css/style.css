@@ -729,7 +729,7 @@ tel, email{
   }
 
   #compromisso{
-    background: url(../medias/bg-sub-footer.jpg) repeat-x center right -500px;
+    background: none;
   }
 
 }
@@ -746,4 +746,5 @@ tel, email{
   display: inline-block;
   vertical-align: middle;
   font-size: 2rem;
+  color: #07534c;
 }
